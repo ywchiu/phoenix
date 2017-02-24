@@ -1,10 +1,18 @@
-## 修改 /etc/hosts
-
 ## 修改Hostname
-- hostname master (在master上)
-- hostname slave1 (在slave1上)
-- hostname slave2 (在slave2 上)
-- hostname slave3 (在slave3 上)
+- sudo hostname master (在master上)
+- sudo hostname slave1 (在slave1上)
+- sudo hostname slave2 (在slave2 上)
+- sudo hostname slave3 (在slave3 上)
+
+## 修改 /etc/hosts (sudo vi /etc/hosts)
+- 使用ifconfig 檢查各自的IP
+```
+192.168.161.133 master
+192.168.161.134 slave1
+192.168.161.135 slave2
+192.168.161.136 slave3
+```
+
 
 ## 修改配置文件：登入 Master 電腦來修改設定 >
 - regionservers # 設定 regionservers
