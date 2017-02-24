@@ -29,11 +29,6 @@
   </property>
 ```
 
-## 複製設定檔
-- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave1:/usr/local/hadoop/etc/hadoop/
-- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave2:/usr/local/hadoop/etc/hadoop/
-- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave3:/usr/local/hadoop/etc/hadoop/
-
 - vi slaves
 ```
 slave1
@@ -41,7 +36,18 @@ slave2
 slave3
 ```
 
-### 格式化HDFS
+## 複製設定檔
+
+- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave1:/usr/local/hadoop/etc/hadoop/
+
+- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave2:/usr/local/hadoop/etc/hadoop/
+
+- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave3:/usr/local/hadoop/etc/hadoop/
+
+## 刪除已知Hadoop Cluster ID (每一台都要做)
+rm -rf /tmp/hadoop-hadoop/dfs/data/current/
+
+### 格式化HDFS (只有在Master)
 - hdfs namenode -format
 
 ### 啟用HDFS
