@@ -10,6 +10,7 @@
 ### 修改環境變數 (vi ~/.bashrc)
 - export HBASE_HOME=/usr/local/hbase
 - export PATH=$PATH:$HBASE_HOME/bin
+- source ~/.bashrc
 
 ### 修改hbase-env.sh
 - vim $HBASE_HOME/conf/hbase-env.sh  # 修改 JAVA_HOME 路徑
