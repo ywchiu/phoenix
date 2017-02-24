@@ -29,6 +29,11 @@
   </property>
 ```
 
+## Ω∆ªs≥]©w¿…
+- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave1:/usr/local/hadoop/etc/hadoop/
+- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave2:/usr/local/hadoop/etc/hadoop/
+- scp /usr/local/hadoop/etc/hadoop/* hadoop@slave3:/usr/local/hadoop/etc/hadoop/
+
 - vi slaves
 ```
 slave1
