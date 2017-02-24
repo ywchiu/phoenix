@@ -44,6 +44,9 @@ slave3
 
 - scp /usr/local/hadoop/etc/hadoop/* hadoop@slave3:/usr/local/hadoop/etc/hadoop/
 
+## 關閉防火牆
+- sudo iptables -F
+
 ## 刪除已知Hadoop Cluster ID (每一台都要做)
 rm -rf /tmp/hadoop-hadoop/dfs/data/current/
 
