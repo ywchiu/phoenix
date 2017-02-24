@@ -15,6 +15,10 @@
 ### Phoenix 安裝
 - https://github.com/ywchiu/phoenix/blob/master/install_phoneix.md
 
+### 設定Cluster
+- https://github.com/ywchiu/phoenix/blob/master/setup_cluster.md
+
+
 ## 補充資料
 
 ### Hive Batch 與Spark Streaming 簡介
