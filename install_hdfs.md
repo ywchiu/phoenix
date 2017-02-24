@@ -88,5 +88,5 @@ $ source ~/.bashrc
 - hdfs namenode -format
 
 ### 啟用HDFS
-- start-yarn.sh
+- start-dfs.sh
 
