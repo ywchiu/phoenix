@@ -12,7 +12,35 @@
 192.168.161.135 slave2
 192.168.161.136 slave3
 ```
+### 修改設定檔 (在/usr/local/hadoop/etc/hadoop/)
+- vi hdfs-site.xml 
+```
+ <property>
+    <name>dfs.replication</name>
+    <value>3</value>
+  </property>
+```
+ 
+- vi core-site.xml
+```
+ <property>
+    <name>fs.defaultFS</name>
+    <value>hdfs://master</value>
+  </property>
+```
 
+- vi slaves
+```
+slave1
+slave2
+slave3
+```
+
+### 格式化HDFS
+- hdfs namenode -format
+
+### 啟用HDFS
+- start-dfs.sh
 
 ## 修改配置文件：登入 Master 電腦來修改設定 >
 - regionservers # 設定 regionservers
