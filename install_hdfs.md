@@ -1,42 +1,42 @@
-## ³]©wÅv­­
-- ¤Á´«¦¨ root ¨Ï¥ÎªÌ
+## è¨­å®šæ¬Šé™
+- åˆ‡æ›æˆ root ä½¿ç”¨è€…
 
-$ su ¡V
+$ su â€“
 
-- ¨Ï¥Îvisudo ½s¿èÅv­­
+- ä½¿ç”¨visudo ç·¨è¼¯æ¬Šé™
 
 $ visudo 
 
-- µ¹¤©sudo Åv­­ (©ó99¦æ³B)
+- çµ¦äºˆsudo æ¬Šé™ (æ–¼99è¡Œè™•)
 
 hadoop	ALL=(ALL)	ALL
 
-## Java ¦w¸Ë
+## Java å®‰è£
 
-### ²¾°£ÂÂªºJava
+### ç§»é™¤èˆŠçš„Java
 - yum -y remove java-*
 
-### ¤U¸ü¤Î¦w¸ËJava
+### ä¸‹è¼‰åŠå®‰è£Java
 
 - https://mirror.its.sfu.ca/mirror/CentOS-Third-Party/NSG/common/x86_64/jdk-8u102-linux-x64.rpm
 
 - sudo rpm -ivh jdk-8u102-linux-x64.rpm
 
-### ©ó¦w¸Ë¥D¾÷¤W«Ø¥ß³n³sµ²
+### æ–¼å®‰è£ä¸»æ©Ÿä¸Šå»ºç«‹è»Ÿé€£çµ
 
 - ln -s /usr/java/jdk1.8.0_102 /usr/java/java
 
-### ³]©wHadoop
+### è¨­å®šHadoop
 
 - wget http://ftp.tc.edu.tw/pub/Apache/hadoop/common/hadoop-2.7.3/hadoop-2.7.3.tar.gz
 
 - tar -zxvf hadoop-2.7.3.tar.gz
 
 
-### ±NHadoop 2.7.3 ·h²¾¨ì /usr/local
+### å°‡Hadoop 2.7.3 æ¬ç§»åˆ° /usr/local
 - sudo mv hadoop-2.7.3 /usr/local/hadoop
 
-### ½s¿è.bashrc
+### ç·¨è¼¯.bashrc
 - $ vim ~/.bashrc
 - export JAVA_HOME=/usr/java/jdk1.8.0_102/
 - export PATH=$PATH:$JAVA_HOME
@@ -50,24 +50,24 @@ hadoop	ALL=(ALL)	ALL
 - export HADOOP_CONF_DIR=$HADOOP_PREFIX/etc/hadoop 
 - export PATH=$PATH:$HADOOP_PREFIX/bin:$HADOOP_PREFIX/sbin
 
-### §ó·sÅÜ¼Æ
+### æ›´æ–°è®Šæ•¸
 $ source ~/.bashrc
 
-### ¹Á¸Õ¬O§_¥i¥HµL±K½Xµn¤J
+### å˜—è©¦æ˜¯å¦å¯ä»¥ç„¡å¯†ç¢¼ç™»å…¥
 - ssh localhost
 
-### ­×§ï/etc/ssh/sshd_config
+### ä¿®æ”¹/etc/ssh/sshd_config
 - sudo vi /etc/ssh/sshd_config
-- ±NPasswordAuthentication?ÅÜ§ó¬°no
+- å°‡PasswordAuthentication?è®Šæ›´ç‚ºno
 - sudo service sshd restart
 
-### ³]¸mµL±K½Xµn¤J
+### è¨­ç½®ç„¡å¯†ç¢¼ç™»å…¥
 - ssh-keygen -t dsa -P '' -f ~/.ssh/id_dsa
 - cat ~/.ssh/id_dsa.pub >> ~/.ssh/authorized_keys
 - chmod 700 ~/.ssh
 - chmod 600  ~/.ssh/authorized_keys
 
-### ­×§ï³]©wÀÉ
+### ä¿®æ”¹è¨­å®šæª”
 - vi hdfs-site.xml
 ```
  <property>
@@ -84,9 +84,9 @@ $ source ~/.bashrc
   </property>
 ```
 
-### ®æ¦¡¤ÆHDFS
+### æ ¼å¼åŒ–HDFS
 - hdfs namenode -format
 
-### ±Ò¥ÎHDFS
+### å•Ÿç”¨HDFS
 - start-yarn.sh
 

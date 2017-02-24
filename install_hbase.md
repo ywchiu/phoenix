@@ -1,5 +1,5 @@
-
-### ¦w¸Ë HBase Àô¹Ò
+ï»¿
+### å®‰è£ HBase ç’°å¢ƒ
 
 - wget http://apache.stu.edu.tw/hbase/1.2.4/hbase-1.2.4-src.tar.gz
 - tar -zxvf hbase-1.2.4-bin.tar.gz
@@ -7,18 +7,18 @@
 - sudo chown -R hadoop:hadoop /usr/local/hbase
 - sudo chmod +x -R /usr/local/hbase
 
-### ­×§ïÀô¹ÒÅÜ¼Æ (vi ~/.bashrc)
+### ä¿®æ”¹ç’°å¢ƒè®Šæ•¸ (vi ~/.bashrc)
 - export HBASE_HOME=/usr/local/hbase
 - export PATH=$PATH:$HBASE_HOME/bin
 
-### ­×§ïhbase-env.sh
-- vim $HBASE_HOME/conf/hbase-env.sh  # ­×§ï JAVA_HOME ¸ô®|
+### ä¿®æ”¹hbase-env.sh
+- vim $HBASE_HOME/conf/hbase-env.sh  # ä¿®æ”¹ JAVA_HOME è·¯å¾‘
 
 ```
 /usr/java/jdk1.8.0_102/
 ```
 
-### ­×§ï³]©wÀÉ
+### ä¿®æ”¹è¨­å®šæª”
 - vi /usr/local/hbase/conf/hbase-site.xml
 
 ```
@@ -34,5 +34,5 @@
 </configuration>
 ```
 
-## ±Ò¥ÎHBase
+## å•Ÿç”¨HBase
 - start-hbase.sh
